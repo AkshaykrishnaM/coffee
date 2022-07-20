@@ -87,7 +87,33 @@
     </div>
     </div>
  
+<script>
+  /*function check (e)
+  {
+  alert (e.keyCode);
+  }*/
+  // disable right click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.onkeydown = function (e) {
+    //disable F12 key
+    if(e.keyCode == 123) {
+      alert("Haha F12 Is disabled here xD");
+      return false;
+    }
+    
+    //disable c key
+    if(e.ctrlKey && e.keyCode ==67){
+      alert(" Huh CTRL + C Is disabled here xD");
+      return false;
+    }
+    //disable u key
+    if(e.ctrlKey && e.keyCode ==85){
+      alert(" Sorry Honey CTRL + U Is disabled here xD");
+      return false;
+    }
+  }
 
+</script>
 
 
 </body>
